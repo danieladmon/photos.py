@@ -10,7 +10,9 @@ import os
 
 dir = os.getcwd()
 #dir = input("Please type path to the folder:  ")
-deldir = dir + "\\del"; count = 0
+#dir = "C:\\Users\DA\Desktop\motorcity"
+
+deldir = os.path.join(dir,"del"); count = 0
 
 if not os.path.exists(dir):
     print(f"Error: directory \"{dir}\" doesn't exist.")
@@ -19,16 +21,16 @@ if not os.path.exists(dir):
 if not os.path.exists(deldir):
     os.makedirs(deldir)
 
-for f in os.listdir(dir):
-    if f.endswith(".CR2"):
-        fname = dir + "\\" + f.split(".")[0] + ".JPG"
-        if os.path.isfile(fname) == False:
-            fpath = dir + '\\' + f
-            if os.path.isfile(fpath):
-                print(fname)
-                os.rename(fpath,deldir + "\\" + f)
+for cr2 in os.listdir(dir):
+    if cr2.endswith(".CR2"):
+        jpg = dir + "\\" + cr2.split(".")[0] + ".JPG"
+        if os.path.isfile(jpg) == False:
+            delfile = os.path.join(deldir,cr2)
+            if os.path.isfile(delfile)  == False:
+                print(f"Moving file \"{jpg}\"")
+                os.rename(os.path.join(dir,cr2),delfile)
                 count += 1
             else:
-                print(f"Error: file \"{fname}\" already exist.")
+                print(f"Error: file \"{delfile}\" already exist.")
 
 print(f"total moved: {count}")
