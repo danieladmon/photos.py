@@ -23,12 +23,13 @@ if not os.path.exists(deldir):
 
 for cr2 in os.listdir(dir):
     if cr2.endswith(".CR2"):
-        jpg = dir + "\\" + cr2.split(".")[0] + ".JPG"
+        jpg = os.path.join(dir,cr2.split(".")[0] + ".JPG")
+        crfile = os.path.join(dir,cr2)
         if os.path.isfile(jpg) == False:
             delfile = os.path.join(deldir,cr2)
             if os.path.isfile(delfile)  == False:
-                print(f"Moving file \"{jpg}\"")
-                os.rename(os.path.join(dir,cr2),delfile)
+                print(f"Moving file \"{crfile}\"")
+                os.rename(crfile,delfile)
                 count += 1
             else:
                 print(f"Error: file \"{delfile}\" already exist.")
