@@ -8,9 +8,9 @@ RAW is a large file and its slower then JPEG.
 '''
 import os
 
-#dir = os.getcwd()
+dir = os.getcwd()
 #dir = input("Please type path to the folder:  ")
-dir = "C:\\Users\DA\Desktop\motorcity"
+#dir = "C:\\Users\DA\Desktop\motorcity"
 
 deldir = os.path.join(dir,"del"); count = 0
 
