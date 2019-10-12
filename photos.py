@@ -1,5 +1,5 @@
 import os
-dir = "C:\\Users\DA\Desktop\motorcity"
+dir = "C:\\Users\DA\Desktop\XXX"
 
 for f in os.listdir(dir):
     if os.path.splitext(f)[1] == '.CR2':
