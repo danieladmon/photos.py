@@ -13,10 +13,6 @@ Before running `photos.py`, make sure you have Python 3.6+ and the following Pyt
 - `pillow` (for image manipulation)
 - `exifread` (for reading EXIF metadata)
 
-You can install the required dependencies using `pip`:
-```bash
-pip install -r requirements.txt
-```
 
 ## Installation
 
@@ -27,10 +23,6 @@ Clone the repository to your local machine:
 ```bash
 git clone https://github.com/danieladmon/photos.py.git
 cd photos.py
-```
-Install the required Python libraries using pip:
-```bash
-pip install -r requirements.txt
 ```
 
 Once you have the script and dependencies set up, you can run the script with the following command:
